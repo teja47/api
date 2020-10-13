@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os 
 import sys
-import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -27,7 +26,7 @@ SECRET_KEY = 'ks25jwww3xjae-uu+28^6z&5acx4u^*0&njhw955xsjl+g%qcl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['arereyyyapp.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['arereyyyapp.herokuapp.com','127.0.0.1','localhost']
 
 
 # Application definition
@@ -66,7 +65,7 @@ TEMPLATES = [
         'django.template.backends.django.DjangoTemplates',
         'DIRS':
         [os.path.join(BASE_DIR, 'build')],
-     
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -133,7 +132,7 @@ CORS_ORIGIN_ALLOW_ALL =True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS= [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'build','static')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR,"build", "assets")
