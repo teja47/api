@@ -29,11 +29,11 @@ class Cast(models.Model):
     photos=models.ImageField(blank=True)
     avatar=models.ImageField(blank=True)
     awards=models.TextField(blank=True)
-    content=models.TextField()
-    movies=models.TextField()
-    socialMedia=models.TextField()
-    age=models.IntegerField()
-    field=models.TextField()
+    content=models.TextField(blank=True)
+    movies=models.TextField(blank=True)
+    socialMedia=models.TextField(blank=True)
+    age=models.IntegerField(blank=True)
+    field=models.TextField(blank=True)
     def __str__(self):
         return self.name
 
