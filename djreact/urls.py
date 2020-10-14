@@ -9,7 +9,7 @@ urlpatterns = [
       re_path('(?P<path>.*)/$', index, name='index'),
       path('',index,name="index"),
       path('api-auth/', include('rest_framework.urls')),
-      path('admin/1', admin.site.urls),
+      path('admin', admin.site.urls),
       path('api',include('articles.api.urls')),
       path('pos/',include('articles.posters.urls')),
       path('trailers/',include('articles.trailers.urls')),
