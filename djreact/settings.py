@@ -9,8 +9,9 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-import django_heroku
+
 from pathlib import Path
+import django_heroku
 import os 
 import sys
 
@@ -33,7 +34,6 @@ ALLOWED_HOSTS = ['arereyyyapp.herokuapp.com','127.0.0.1','localhost']
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'corsheaders',
