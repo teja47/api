@@ -11,7 +11,7 @@ const Pass=(props)=> {
 
  res.push(
     
- <a href= {`/${dat.id}`}  >
+ <a href= {`${dat.id}`}  >
   <CardImg
     className="size  justify-content-center "
     type="submit"

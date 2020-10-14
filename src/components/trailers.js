@@ -16,6 +16,8 @@ class TrailerClass extends React.Component {
         this.setState({
           artical: res.data
         });
+        console.log(res.data)
+
             const test = this.state.artical.links
             const arrays= test.split(" ")
             this.setState({

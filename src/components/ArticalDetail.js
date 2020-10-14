@@ -14,11 +14,12 @@ class Movie extends Component {
   }
   componentDidMount(){
       const articalID=this.props.match.params.articalID
-    axios.get(`http://127.0.0.1:8000/api/${articalID}`)
+    axios.get(`http://127.0.0.1:8000/api${articalID}`)
     .then(res => {
       this.setState({
         artical: res.data
       })
+      console.log(res.data)
       const test = this.state.artical.cast
       const arrays= test.split(",")
       this.setState({

@@ -9,7 +9,7 @@ class Header extends Component{
                 <Navbar className="d-flex row fixed-top  "  dark style={{backgroundColor: "#0f0e0e"}} >
                 <div className="container ">
                 <NavbarBrand href="/">
-                        <img src="/assets/arereyyycircle.png"  height="48" width="48" alt="Arereyyy"/>
+                        <img src="static/assets/arereyyycircle.png"  height="48" width="48" alt="Arereyyy"/>
                 </NavbarBrand>
                
                 <Form inline className="col-8 col-md-3  container"> 
