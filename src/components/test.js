@@ -8,7 +8,7 @@ class Expenses extends Component {
     articals: []
   }
   componentDidMount(){
-    axios.post('http://127.0.0.1:8000/expenses/')
+    axios.post('http://arereyyyapp.herokuapp.com/expenses/')
     .then(res => {
       this.setState({
         articals: res.data

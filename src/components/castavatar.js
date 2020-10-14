@@ -15,7 +15,7 @@ componentDidMoun=()=>{
 this.props.data.tes.map(dat=>{
      console.log(dat)
    const articalNAME=dat
-   axios.get(`http://127.0.0.1:8000/cast/${articalNAME}`)
+   axios.get(`http://arereyyyapp.herokuapp.com/cast/${articalNAME}`)
    .then(res=>{ 
        this.setState({
            artical:res.data
