@@ -9,7 +9,7 @@ class Casty extends React.Component{
 
     componentDidMount(){
         const articalNAME=this.props.match.params.articalNAME
-        axios.get(`https://arereyyyapp.herokuapp.com/cast${articalNAME}`)
+        axios.get(`http://127.0.0.1:8000/cast${articalNAME}`)
     .then(res => {
       this.setState({
         cast: res.data

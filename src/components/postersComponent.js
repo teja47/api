@@ -8,7 +8,7 @@ class Posters extends Component {
   }
   componentDidMount(){
     const  articalID= Math.floor(8 + Math.random() * (5-1));
-    axios.get(`https://arereyyyapp.herokuapp.com/pos/${articalID}`)
+    axios.get(`http://127.0.0.1:8000/pos${articalID}`)
     .then(res => {
       this.setState({
         artical: res.data
