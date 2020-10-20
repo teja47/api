@@ -1,4 +1,4 @@
-from rest_framework.generics import ListAPIView,RetrieveAPIView,UpdateAPIView,DestroyAPIView
+from rest_framework.generics import ListAPIView,RetrieveAPIView,UpdateAPIView,DestroyAPIView,CreateAPIView
 from .serializer import PosterSerializer
 from articles.models import Cast
 class PosterListView(ListAPIView):
@@ -14,5 +14,8 @@ class PosterUpdateView(UpdateAPIView):
     queryset = Cast.objects.all()
     serializer_class=PosterSerializer
 class PosterDestroyView(DestroyAPIView):
+    queryset = Cast.objects.all()
+    serializer_class=PosterSerializer
+class PosterCreateView(CreateAPIView):
     queryset = Cast.objects.all()
     serializer_class=PosterSerializer
