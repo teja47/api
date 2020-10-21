@@ -135,12 +135,12 @@ CORS_ORIGIN_ALLOW_ALL =True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS= [
-    os.path.join(BASE_DIR, 'build/static')
+    os.path.join(BASE_DIR, 'static')
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR,"build")
-MEDIA_URL ='/media/'
-MEDIA_ROOT=os.path.join(BASE_DIR,'src')
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+# MEDIA_URL ='/media/'
+# MEDIA_ROOT=os.path.join(BASE_DIR,'pics')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 django_heroku.settings(locals())
 REST_FRAMEWORK = {
