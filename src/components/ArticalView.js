@@ -7,7 +7,7 @@ class ArticalView extends Component {
     articals: []
   }
   componentDidMount(){
-    axios.get('https://arereyyy.herokuapp.com/api')
+    axios.get('https://arereyyy-api.herokuapp.com/api')
     .then(res => {
       this.setState({
         articals: res.data

@@ -11,7 +11,7 @@ class TrailerClass extends React.Component {
     }
     componentDidMount(){
         const articalID=1
-      axios.get(`https://arereyyy.herokuapp.com/trailers${articalID}`)
+      axios.get(`https://arereyyy-api.herokuapp.com/trailers${articalID}`)
       .then(res => {
         this.setState({
           artical: res.data

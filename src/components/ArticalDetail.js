@@ -14,7 +14,7 @@ class Movie extends Component {
   }
   componentDidMount(){
       const articalID=this.props.match.params.articalID
-    axios.get(`https://arereyyy.herokuapp.com/api${articalID}`)
+    axios.get(`https://arereyyy-api.herokuapp.com/api${articalID}`)
     .then(res => {
       this.setState({
         artical: res.data
