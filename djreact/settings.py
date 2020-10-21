@@ -144,8 +144,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/assets')
 
 
 django_heroku.settings(locals())
-from botocore.client import Config
 
+from botocore.client import Config
+import boto3
 
 s3 = boto3.resource(
     's3',
