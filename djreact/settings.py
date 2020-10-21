@@ -139,10 +139,10 @@ CORS_ORIGIN_ALLOW_ALL =True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS= [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'build/static')
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR,'assets')
 MEDIA_URL =''
 MEDIA_ROOT=os.path.join(BASE_DIR,'assets')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
