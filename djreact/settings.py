@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'articles'
+    'articles',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -134,12 +135,25 @@ CORS_ORIGIN_ALLOW_ALL =True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+MEDIA_URL = '/images/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'public/static'),
 )
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/assets')
+
+
 django_heroku.settings(locals())
+
+
+AWS_ACCESS_KEY_ID = 'AKIA5XIJR7PCIUJDXBE3'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'arereyyy-bucket'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
@@ -147,5 +161,3 @@ REST_FRAMEWORK = {
         # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     'rest_framework.permissions.AllowAny'  ]
 }
-
-
