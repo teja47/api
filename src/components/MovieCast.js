@@ -11,7 +11,7 @@ const MovieCast=(props)=>{
      data.map(dat=>{
       rest.push(
         <div>
-            <a  href={`/cast/${dat}`}> <div  className="marginright10"  > {dat} </div> </a>
+            <a  href={`/cast/${dat}/`}> <div  className="marginright10"  > {dat} </div> </a>
          </div>
      )
   
