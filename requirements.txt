@@ -32,3 +32,4 @@ virtualenvwrapper==4.8.4
 virtualenvwrapper-win==1.2.6
 whitenoise==5.2.0
 wrapt==1.12.1
+bojo3==1.16.1
