@@ -144,8 +144,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/assets')
 
 
 django_heroku.settings(locals())
-
-
+AWS = require('aws-sdk');
 
 s3 = AWS.S3({signatureVersion: 'v4'});
 
