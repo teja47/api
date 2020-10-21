@@ -12,8 +12,8 @@ urlpatterns = [
       path('pos',include('articles.posters.urls')),
       path('trailers',include('articles.trailers.urls')),
       path('cast',include('articles.Cast.urls')),
-      re_path('(?P<path>.*)/$', index, name='index'),
-      path('',index,name="index"),
+      # re_path('(?P<path>.*)/$', index, name='index'),
+      # path('',index,name="index"),
 
 
 ]
