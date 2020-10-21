@@ -150,8 +150,8 @@ import boto3
 
 s3 = boto3.resource(
     's3',
-    AWS_ACCESS_KEY_ID ='AKIA5XIJR7PCIUJDXBE3',
-    AWS_SECRET_ACCESS_KEY ='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',
+    aws_access_key_id='AKIA5XIJR7PCIUJDXBE3',
+    aws_secret_access_key='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',
     config=Config(signature_version='s3v4')
 )
 
