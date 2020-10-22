@@ -128,7 +128,6 @@ USE_TZ = True
 
 CORS_ORIGIN_ALLOW_ALL =True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
