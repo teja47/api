@@ -153,7 +153,7 @@ django_heroku.settings(locals())
 #     aws_secret_access_key='M0kJDuG2u0ltFBsAvUmacWFRCAd4dcPZFPCKnDD4',
 #     config=Config(signature_version='v4')
 # )
-AWS_S3_REGION_NAME = 'asia-pacific(mumbai)' #change to your region
+AWS_S3_REGION_NAME = 'us-east-2' #change to your region
 AWS_S3_SIGNATURE_VERSION = 's3v4'
 AWS_ACCESS_KEY_ID = 'AKIA5XIJR7PCIUJDXBE3'
 AWS_SECRET_ACCESS_KEY = 'M0kJDuG2u0ltFBsAvUmacWFRCAd4dcPZFPCKnDD4'
