@@ -133,13 +133,13 @@ CORS_ORIGIN_ALLOW_ALL =True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/images/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'public/static'),
-)
+# STATIC_URL = '/static/'
+# MEDIA_URL = '/images/'
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'public/static'),
+# )
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'public/static/assets')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'public/static/assets')
 
 
 django_heroku.settings(locals())
