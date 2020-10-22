@@ -144,16 +144,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'public/static/assets')
 
 django_heroku.settings(locals())
 
-# from botocore.client import Config
-# import boto3
+from botocore.client import Config
+import boto3
 
-# s3 = boto3.resource(
-#     's3',
-#     aws_access_key_id='AKIA5XIJR7PCIUJDXBE3',
-#     aws_secret_access_key='M0kJDuG2u0ltFBsAvUmacWFRCAd4dcPZFPCKnDD4',
-#     config=Config(signature_version='v4')
-# )
-AWS_S3_REGION_NAME = 'us-east-2' #change to your region
+s3 = boto3.resource(
+    's3',
+    aws_access_key_id='AKIA5XIJR7PCIUJDXBE3',
+    aws_secret_access_key='M0kJDuG2u0ltFBsAvUmacWFRCAd4dcPZFPCKnDD4',
+    config=Config(signature_version='s3v4')
+)
+AWS_S3_REGION_NAME = 'ap-south-1'
 AWS_S3_SIGNATURE_VERSION = 's3v4'
 AWS_ACCESS_KEY_ID = 'AKIA5XIJR7PCIUJDXBE3'
 AWS_SECRET_ACCESS_KEY = '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'
