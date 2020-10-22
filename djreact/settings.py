@@ -48,8 +48,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -132,14 +132,14 @@ CORS_ORIGIN_ALLOW_ALL =True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+MEDIA_URL = '/images/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
-# STATIC_URL = '/static/'
-# MEDIA_URL = '/images/'
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'public/static'),
-# )
-
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'public/static/assets')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/assets')
 
 
 django_heroku.settings(locals())
