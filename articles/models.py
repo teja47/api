@@ -13,7 +13,8 @@ class Movie(models.Model):
 class Trailer(models.Model):
     id = models.BigIntegerField(primary_key = True)
     title=models.CharField(max_length=120)
-    links=models.TextField()
+    poster=models.ImageField(blank=True)
+    short=models.TextField()
     def __str__(self):
         return self.title
 class Poster(models.Model):

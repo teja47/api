@@ -8,6 +8,8 @@ class ArticalListView(ListAPIView):
 class ArticalDetailView(RetrieveAPIView):
     queryset = Movie.objects.all()
     serializer_class=ArticalSerializer
+    lookup_field='title'
+    lookup_url_kwarg="abc"
 class ArticalUpdateView(UpdateAPIView):
     queryset = Movie.objects.all()
     serializer_class=ArticalSerializer
