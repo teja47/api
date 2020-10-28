@@ -12,6 +12,7 @@ urlpatterns = [
       path('pos',include('articles.posters.urls')),
       path('trailers',include('articles.trailers.urls')),
       path('cast',include('articles.Cast.urls')),
+      path('articalAssets',include('articles.articalAssets.urls'))
       # re_path('(?P<path>.*)/$', index, name='index'),
       # path('',index,name="index"),
 
